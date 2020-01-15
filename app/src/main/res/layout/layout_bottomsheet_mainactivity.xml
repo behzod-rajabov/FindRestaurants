@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_history_menu_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    android:orientation="vertical"
+    app:cardBackgroundColor="#EFFFFFFF"
+    app:cardCornerRadius="16dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <EditText
+            android:layout_margin="8dp"
+            android:id="@+id/edit_text_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/texts"
+            android:drawableEnd="@drawable/ic_location"
+            android:hint="Type the city..."
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_gravity="right"
+            android:layout_marginRight="8dp"
+            android:text="Minimum 2 characters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_city"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+        </ScrollView>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
